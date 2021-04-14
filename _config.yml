@@ -2,8 +2,7 @@ theme: jekyll-theme-minimal
 title: Thames Catchment Community Eels Project
 description: Workshop materials for the Thames Catchment Community Eels Project
 logo: https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Eel%20Project_Final%20Logo%20png.png
-author:
- email            :
+footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
