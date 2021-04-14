@@ -28,6 +28,10 @@ Topics:
 
 Survey (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
 
+### Workshop 4 - coming soon...
+
+### Workshop 5 - coming soon...
+
 <hr>
 
 Project partners & funders: 
