@@ -16,7 +16,7 @@
 
 Topics:
 
-- Spatial Thinking and Introduction to Cartography
+- Introduction to Cartography
 
 - Introduction to GIS
 
