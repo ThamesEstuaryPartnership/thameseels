@@ -14,15 +14,15 @@
 
 ### Workshop Series 3 - plan and survey (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
 
-#### Spatial thinking and Introduction to Cartography
+- Spatial thinking and Introduction to Cartography
 
-#### Introduction to GIS
+- Introduction to GIS
 
-#### Introduction to Coordinate Reference Systems
+- Introduction to Coordinate Reference Systems
 
-#### Introduction to QGIS
+- Introduction to QGIS
 
-#### Introduction to ArcGIS
+- Introduction to ArcGIS
 
 <hr>
 
