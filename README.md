@@ -24,3 +24,7 @@
 Project partners & funders: 
 
 ![alt text](https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Partner%20Acknowlegements%20Band%20V2.png)
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<p style="text-align: center;">
+<a href="https://www.thamesestuarypartnership.org/" target="_blank"><img src="https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png" width = "100" height = "50"></a> <a href="mailto:w.bodnar@ucl.ac.uk" class="fa fa-envelope fa-lg" style="color:#314b5c"></a>
