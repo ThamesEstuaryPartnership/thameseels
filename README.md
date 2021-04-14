@@ -1,4 +1,6 @@
-## Project website - [link](https://www.thamesriverstrust.org.uk/thames-catchment-community-eels-project/){:target="_blank" rel="noopener"}
+## Project website - [link](https://www.thamesriverstrust.org.uk/thames-catchment-community-eels-project/)
+
+<a href="https://www.thamesriverstrust.org.uk/thames-catchment-community-eels-project/" target="_blank">link</a>
 
 ## Project package - [link](https://storymaps.arcgis.com/collections/7cf499061da14932875025e129bfd104)
 
