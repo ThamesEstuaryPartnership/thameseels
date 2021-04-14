@@ -8,6 +8,8 @@
 
 ### Workshop 1 - <a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>
 
+<br>
+
 ### Workshop 2 - coming soon...
 
 ### Workshop Series 3 - plan and survey <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>
