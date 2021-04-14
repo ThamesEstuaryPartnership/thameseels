@@ -26,7 +26,7 @@ Topics:
 
 - Introduction to ArcGIS
 
-<p style="color:#CF0029">Please fill out the <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">survey</a>
+<p style="color:#CF0029">Please fill out the <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">survey</a>!</p>
 
 ### Workshop 4 - coming soon...
 
