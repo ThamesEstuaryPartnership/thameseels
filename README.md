@@ -17,12 +17,13 @@
 <br>
 <br>
 <br>
-<br>
 <hr>
 
 Project partners & funders: 
 
 ![alt text](https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Partner%20Acknowlegements%20Band%20V2.png)
+
+<hr>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <p style="text-align: center;">
