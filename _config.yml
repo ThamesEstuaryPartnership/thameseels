@@ -1,5 +1,4 @@
 theme: jekyll-theme-minimal
-
-title: [TEP - Thames Catchment Community Eels Project]
-description: [Workshop materials for the Thames Catchment Community Eels Project]
-logo: [Location of the logo]
+title: TEP - Thames Catchment Community Eels Project
+description: Workshop materials for the Thames Catchment Community Eels Project
+logo: /assets/img/logo.png
