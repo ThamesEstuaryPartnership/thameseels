@@ -26,7 +26,7 @@ Topics:
 
 - Introduction to ArcGIS
 
-Survey <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
+Survey (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
 
 <hr>
 
