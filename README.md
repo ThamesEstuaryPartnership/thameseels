@@ -13,15 +13,16 @@
 ### Workshop 2 - coming soon...
 
 ### Workshop Series 3 - plan and survey <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>
-
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <hr>
 
 Project partners & funders: 
