@@ -22,7 +22,6 @@
 <br>
 <br>
 <br>
-<br>
 <hr>
 
 Project partners & funders: 
