@@ -21,4 +21,4 @@
 
 Project partners & funders: 
 
-[]: https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Partner%20Acknowlegements%20Band%20V2.png
+![][https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Partner%20Acknowlegements%20Band%20V2.png]
