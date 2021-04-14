@@ -12,9 +12,11 @@
 
 ### Workshop 2 - coming soon...
 
-### Workshop Series 3 - plan and survey (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
+### Workshop Series 3
 
-- Spatial thinking and Introduction to Cartography
+Topics:
+
+- Spatial Thinking and Introduction to Cartography
 
 - Introduction to GIS
 
@@ -23,6 +25,8 @@
 - Introduction to QGIS
 
 - Introduction to ArcGIS
+
+Survey <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">link</a>)
 
 <hr>
 
