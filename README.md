@@ -6,9 +6,9 @@
 
 ## Project package - <a href="https://storymaps.arcgis.com/collections/7cf499061da14932875025e129bfd104" target="_blank">link</a>
 
-### Workshop 1 - <a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>
-
 <br>
+
+### Workshop 1 - <a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>
 
 ### Workshop 2 - coming soon...
 
