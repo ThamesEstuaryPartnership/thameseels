@@ -10,7 +10,7 @@
 
 ### Workshop 1 (<a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>)
 
-### Workshop 2 - coming soon...
+### Workshop 2 - (<a href="https://storymaps.arcgis.com/stories/72a068ca83c941abbb4765c2b5b5159a" target="_blank">link</a>)
 
 ### Workshop Series 3
 
