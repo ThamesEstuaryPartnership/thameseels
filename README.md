@@ -10,13 +10,13 @@
 
 ### Workshop 1 (<a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>)
 
-### Workshop 2 - (<a href="https://storymaps.arcgis.com/stories/72a068ca83c941abbb4765c2b5b5159a" target="_blank">link</a>)
+### Workshop 2 (<a href="https://storymaps.arcgis.com/stories/72a068ca83c941abbb4765c2b5b5159a" target="_blank">link</a>)
 
 ### Workshop Series 3
 
 Topics:
 
-- Introduction to Cartography
+- Introduction to Cartography (<a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>)
 
 - Introduction to GIS
 
@@ -26,7 +26,7 @@ Topics:
 
 - Introduction to ArcGIS
 
-<p style="color:#CF0029">Please fill out the <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/index.html#1" target="_blank">survey</a>!</p>
+<p style="color:#CF0029">Please fill out the <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/cartography/#1" target="_blank">survey</a>!</p>
 
 ### Workshop 4 - coming soon...
 
