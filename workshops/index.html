@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>TEP Workshop Series 3</title>
+    <title>Introduction to Cartography</title>
     <meta charset="utf-8" />
     <meta name="author" content="Wanda Bodnar" />
     <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="slides_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="slides_files/jquery-1.12.4/jquery.min.js"></script>
+    <link href="slides_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="slides_files/leaflet-1.3.1/leaflet.js"></script>
+    <link href="slides_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="slides_files/proj4-2.6.2/proj4.min.js"></script>
+    <script src="slides_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="slides_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="slides_files/leaflet-binding-2.0.4.1/leaflet.js"></script>
+    <script src="slides_files/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+    <script src="slides_files/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -13,10 +25,9 @@
 
 
 
-
-background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png), url(https://www.thamesriverstrust.org.uk/wp-content/uploads/2021/04/Eel-Project.png)
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png), url(https://www.thamesriverstrust.org.uk/wp-content/uploads/2021/05/Thames-Catchment-Community-Eel-Project-Logo.png)
 background-size: 12%
-background-position: 43% 80%, 57% 81.5%
+background-position: 42% 88.5%, 58% 91.5%
 class: center, middle, inverse
 .footer[Copyright © 2021 Thames Estuary Partnership]
 
@@ -24,6 +35,7 @@ class: center, middle, inverse
 
 ##Workshop series 3
 
+###Introduction to Cartography
 Thames Estuary Partnership &lt;br&gt; Wanda Bodnar &lt;br&gt;&lt;br&gt; &lt;i style=font-size:80%;&gt;(Press H to see the site navigation options)&lt;/i&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -72,51 +84,23 @@ background-size: cover
 
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
 ### Table of contents
 
-* [Introduction to Cartography](https://thamesestuarypartnership.github.io/thameseel/workshops/#4)
+* Spatial thinking &amp; intelligence
 
-* [Introduction to GIS](https://thamesestuarypartnership.github.io/thameseel/workshops/#5)
+* History 
 
-* [Introduction to Coordinate Reference Systems](https://thamesestuarypartnership.github.io/thameseel/workshops/#6)
+* Map making - things to consider
 
-* [Introduction to QGIS](https://thamesestuarypartnership.github.io/thameseel/workshops/#7)
+* Map types
 
-* [Introduction to ArcGIS](https://thamesestuarypartnership.github.io/thameseel/workshops/#8)
+* Map design
 
-* [Survey](https://thamesestuarypartnership.github.io/thameseel/workshops/#9)
+* Summary
 
-&lt;style&gt;
-h1, h2, h3, p {
-  color: #003462;
-}
-&lt;style&gt;
-
----
-
-background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
-background-size: 100px
-background-position: 95% 5%
-
-### Introduction to Cartography
-
-- History of cartography through some notable maps
-
-- Cartography and mapping
-
-- Map types (reference, thematic, topographic, topological and cartometric)
-
-- Map projection types and methods
-
-- Symbology (visual variables)
-
-- Basic colour theory (RGB, CMYK, HTML notations)
-
-- Map design (legend, label, title and additional text, layout and so on)
-
-- Case studies
+* Case studies
 
 &lt;style&gt;
 h1, h2, h3, p {
@@ -126,29 +110,59 @@ h1, h2, h3, p {
 
 ---
 
+class: center, middle, inverse
+
+#Spatial thinking &amp; intelligence
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
-### Introduction to Geographic Information Systems
+### Spatial thinking &amp; intelligence
 
-- GIS capabilities
+*"An important set of competencies for examining the world around us. These skills enable the geographer to visualise and analyse spatial relationships between objects, such as location, distance, direction, shape and pattern."* (The Association of American Geographers, 2008)
 
-- GIS data (vector and raster)
+The capacity to imagine or visualise: 
 
-- GIS data capture
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/carto1.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
 
-- GIS data format (shapefile, geojson, KML and so on)
+- Positions of objects
 
-- GIS data quality
+- Their shapes
 
-- Finding GIS data
-
-- GIS software examples
+- Their spatial relations to one another and the movement they make to form new spatial relations
 
 
 &lt;style&gt;
-h1, h2, h3, p {
+h1, h2, h3, p, ul {
   color: #003462;
 }
 &lt;style&gt;
@@ -157,34 +171,26 @@ h1, h2, h3, p {
 
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
-### Introduction to Coordinate Reference Systems
+### Spatial thinking &amp; intelligence
 
-- Geographic coordinate systems (GCS)
+For example:
 
-    - Geodesy, ellipsoid, datums
-    
-    - Latitude and longitude
-    
-    - Converting DMS, DD, DDM
+- Packing up a bag
 
-- Projected coordinate systems (PCS)
+- Jigsaw puzzle
 
-    - Map projections
-    
-    - UTM
-    
-    - Web Merctor
-    
-    - State Plane Coordinaet System
-    
-    - British National Grid
-    
-    - Projection parameters - ArcGIS example
+- Getting from A to B (e.g. Google Maps or hardcopy map)
+
+- Assembling a furniture
+
+&lt;center&gt;&lt;img src="https://cartoonresearch.com/wp-content/uploads/2015/05/Friends1.jpg" width = "400" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
+
 
 &lt;style&gt;
-h1, h2, h3, p {
+h1, h2, h3, p, ul {
   color: #003462;
 }
 &lt;style&gt;
@@ -193,35 +199,19 @@ h1, h2, h3, p {
 
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
-### Introduction to QGIS
+### Spatial thinking &amp; intelligence
 
-- Downloading and installing
+Skills:
 
-- Adding data
+- Spatial perception: the ability to perceive spatial relationships in respect to the orientation of one’s body.
 
-- Symbology &amp; labelling
-
-- Attribute table
-
-- Creating vector data
-
-- Digitising
-
-- Data management tools
-
-- Geoprocessing tools
-
-- Georeferencing
-
-- Reprojecting
-
-- Web map
-
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/carto2.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
 
 &lt;style&gt;
-h1, h2, h3, p {
+h1, h2, h3, p, ul {
   color: #003462;
 }
 &lt;style&gt;
@@ -230,22 +220,556 @@ h1, h2, h3, p {
 
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
-### Introduction to ArcGIS
+### Spatial thinking &amp; intelligence
 
-- Intro to the use of: 
+Skills:
 
-  - ArcGIS Online
+- Mental rotation: manipulation of objects in our head.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/carto3.jpg" width = "500" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Skills:
+
+- Disembedding: separating objects from a complicated background.
+
+&lt;center&gt;&lt;img src="https://www.frontiersin.org/files/Articles/502247/frym-08-00050-HTML-r1/image_m/figure-2.jpg" width = "350" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;(Souce: frontiers)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Skills:
+
+- Spatial scaling: transforming information between different sizes.
+
+&lt;center&gt;&lt;img src="https://www.frontiersin.org/files/Articles/502247/frym-08-00050-HTML-r1/image_m/figure-3.jpg" width = "500" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;(Souce: frontiers)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Skills:
+
+- Navigation: moving around in the environment.
+
+&lt;center&gt;&lt;img src="https://s3.amazonaws.com/gs-waymarking-images/321a9322-e7e8-4827-8cfc-72c07c759fd4.jpg" width = "600" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Skills:
+
+- Recognising patterns and shapes: the ability to retain an image of the simple figure in mind, and look for it by suppressing objects irrelevant to the task at hand.
+
+
+&lt;center&gt;&lt;img src="https://images.immediate.co.uk/production/volatile/sites/21/2019/03/1282046685197-1pvexfsuoinjn-e19ad83.jpg?webp=true&amp;quality=90&amp;resize=620%2C413" width = "500" height = "auto"&gt;&lt;/center&gt;
+--
+
+&lt;center&gt;&lt;h3&gt;What is wrong with this map?&lt;/h3&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Full docking stations are shown in red with a yellow circle around them, whilst nearly full are red with a sliding scale down through purple to blue with a blue outline – the latter being totally empty.
+https://www.bikeradar.com/news/new-map-reveals-use-patterns-of-boris-bikes/
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Why is spatial thinking important?
+
+When looking at a map, it is good to be able identify spatial relationships:
+
+ - Adjacent 
+ 
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/next.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Why is spatial thinking important?
+
+When looking at a map, it is good to be able identify spatial relationships:
+ 
+ - Intersect
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/inter.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+ 
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Why is spatial thinking important?
+
+When looking at a map, it is good to be able identify spatial relationships:
+
+ - Contain
+ 
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/contains.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+ 
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Spatial thinking &amp; intelligence
+
+Why is spatial thinking important?
+
+When looking at a map, it is good to be able identify spatial relationships:
+ 
+ - Overlap
+ 
+ &lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/overlap.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+class: center, middle, inverse
+
+#History
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Çatalhöyük Map
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/catal_huyuk_map.jpg" width = "1000" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Çatalhöyük Map (Source: Cartography blog)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The oldest existing map was created around 6200 BC in Turkey. It may depict a volcanic eruption 8,900 years ago.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Babylonian Map of the World (Imago Mundi)
+
+&lt;center&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG" width = "650" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Imago Mundi (Source: Wikipedia)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+This is a Babylonian clay tablet containing a labelled illustration of the known world dated to roughly the 6th century BC.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Anaximander map
+
+&lt;center&gt;&lt;img src="https://digitalmapsoftheancientworld.files.wordpress.com/2019/06/800px-anaximander_world_map-en.svg_.png" width = "400" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Reconstruction of Anaximander’s Map (Source: Digital Maps of the Ancient World)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+This map was one of the first maps of the world which was circular in form and showed the known lands grouped around the Aegean Sea at the center, surrounded by the ocean.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Tabula Rogeriana
+
+&lt;center&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/TabulaRogeriana_upside-down.jpg" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Tabula Rogeriana (Source: Wikipedia)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+*Tabula Rogeriana* is a world map created by the Arab geographer Muhammad al-Idrisi in 1154. The map was later used by Christopher Columbus and Vasco Da Gama for their voyages in America and India.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Mercator map
+
+&lt;center&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Mercator_1569.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Mercator map (Source: Wikipedia)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The Mercator map was created by Flemish geographer and cartographer Gerardus Mercator in 1569. This was the first attempt to project Earth on a flat surface.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+John Snow’s map
+
+&lt;center&gt;&lt;img src="https://media.nationalgeographic.org/assets/photos/000/276/27636.jpg" width = "600" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;John Snow's cholera map - the black circles stacked show the the number of cases (Source: NG)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, il, ul, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+In 1854 Doctor John Snow mapped the cases of the deadly cholera epidemic in London's Broad Street region and was able to trace the cholera outbreak to a single infected water pump. Snow's research was the first example of combining public health research and geography.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Interactive story maps
+
+&lt;center&gt;&lt;a target="_blank" href="https://www.nytimes.com/interactive/2020/03/22/world/coronavirus-spread.html"&gt;&lt;img alt="" src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure0.gif" width = 750" height = "auto"&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;How the Virus Got Out (Source: The New York Times) &lt;br&gt;&lt;i&gt;Click on the image to see the map&lt;i&gt;&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The use of interactive maps to tell stories is increasingly common, especially in journalism. 
+The interactive story map below was made by The New York Times and it tells the story of how the SARS-CoV-2 virus got out of Wuhan, China.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### History
+
+Real-time maps
+
+&lt;center&gt;&lt;a target="_blank" href="https://earth.nullschool.net/#current/wind/surface/level/orthographic=-24.56,27.33,325"&gt;&lt;img alt="" src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/earthwind.gif" width = 750" height = "auto"&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Earth Wind Map &lt;br&gt; &lt;i&gt;Click on the image to see the map&lt;i&gt;&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The Earth Wind Map was developed by [Cameron Beccario](https://twitter.com/cambecc?lang=en) in 2013. It combines computer science and cartography to visualise real-time data. 
+
+---
+
+class: center, middle, inverse
+
+#Making map - things to consider
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map making - things to consider
+
+- Purpose of the map: 
+
+ - Why am I making this map? 
+ - What is the story that I want to tell?
+
+- Audience: 
+  - Who is it for? Novices? Experts? 
+  - Why are they interested?
+
+- Map type: 
+  - What do I want to show with the map? 
+  - What kind of data am I using?
+
+- Map design: 
+  - Is my map easy to read and interpret? 
+  - Am I using visual variables and hierarchy in a right way? 
+  - Is my map the right scale?
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+class: center, middle, inverse
+
+#Map types
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Reference maps
+
+<div id="htmlwidget-70bfcb681d84827b447d" style="width:100%;height:70%;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-70bfcb681d84827b447d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false,"minZoom":10,"maxZoom":18,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[51.52,-0.1],14,[]]},"evals":[],"jsHooks":[]}</script>
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Reference maps are those that are constructed for a general audience and emphasises a variety of natural and man-made features. It is used for a wide variety of activities. 
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Qualitative maps: show the spatial distribution of single theme of nominal data (e.g. time zones). 
   
-  - ArcMap 
-  
-  - ArcGIS Pro
-  
-  - StoryMaps
+&lt;center&gt;&lt;img src="http://2.bp.blogspot.com/-TSm48o1OTWw/Uh4IY4aYA-I/AAAAAAAAFD8/WKg8MP_6kak/s1600/Clock.gif" width = "700" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Time zones&lt;/p&gt;&lt;/center&gt;
 
 &lt;style&gt;
-h1, h2, h3, p {
+h1, h2, h3, p, p.caption {
   color: #003462;
 }
 &lt;style&gt;
@@ -254,25 +778,1591 @@ h1, h2, h3, p {
 
 background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
 background-size: 100px
-background-position: 95% 5%
+background-position: 98% 4%
 
-### Survey
+### Map types
 
-If you are interested to attend one or all of these workshops, please fill out the survey below and press 'Submit'. 
+- Thematic maps
 
-&lt;center&gt;&lt;embed src="https://survey123.arcgis.com/share/3d718a95aa154143b2af04a1b5da9e66" width="90%" height="450"&gt;&lt;/center&gt;
+  - Quantitative maps display the spatial aspects of numerical data (single, multiple).
+    
+    **Choropleth map** (continuous data) 
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-3-1.png" width = "500" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Population per state in 2019&lt;/p&gt;&lt;/center&gt;
+    
 
 &lt;style&gt;
-h1, h2, h3, p {
+h1, h2, h3, p, p.caption {
   color: #003462;
 }
 &lt;style&gt;
 
 ---
 
-background-image: url(https://i.stack.imgur.com/bUpIh.png),url(https://ulyngs.github.io/rmarkdown-workshop-2019/slides/figures/rmarkdown.png)
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Quantitative maps display the spatial aspects of numerical data (single, multiple). 
+  
+    **Isopleth map** (continuous data)
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/japan.png" width = "550" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;2011 Tōhoku tsunami (Source: Esri)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Quantitative maps display the spatial aspects of numerical data (single, multiple). 
+  
+    **Dot density map** (discrete data)
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/dotdens.gif" width = "400" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Spread of SARS-CoV-2 in London (March 2020)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Quantitative maps display the spatial aspects of numerical data (single, multiple). 
+  
+    **Proportional/graduated symbol map** (discrete data)
+    
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-4-1.png" width = "500" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;The 1000 biggest cities in mainland US&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Cartograms
+  
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-5-1.png" width = "550" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Population per state in 2019&lt;/p&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+**Cartogram** is a type of thematic map (a variant of the proportional/graduated symbol maps) where data is mapped by altering the shape and size of an area based on the data associated with the area.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Cartograms - grid, dorling, tilegram
+  
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-6-1.png" width = "550" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;US Election 2020 - gridmap&lt;/p&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+**Cartogram** is a type of thematic map (a variant of the proportional/graduated symbol maps) where data is mapped by altering the shape and size of an area based on the data associated with the area.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Cartograms - grid, dorling, tilegram
+  
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/carto4.png" width = "420" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;US Election 2020 - dorling&lt;/p&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+**Cartogram** is a type of thematic map (a variant of the proportional/graduated symbol maps) where data is mapped by altering the shape and size of an area based on the data associated with the area.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Cartograms - grid, dorling, tilegram
+  
+&lt;center&gt;&lt;iframe src='https://flo.uri.sh/visualisation/5197211/embed' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;US Election 2020 - tilegram&lt;/p&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+**Cartogram** is a type of thematic map (a variant of the proportional/graduated symbol maps) where data is mapped by altering the shape and size of an area based on the data associated with the area.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Thematic maps
+
+  - Flowmap
+
+&lt;center&gt;&lt;iframe src='https://wandabodnar.github.io/flowmap/transatlantic.html' frameborder='0' scrolling='no' style='width:100%;height:400px;'&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Trans-Atlantic Slave Trade&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+**Flow map** is also a type of thematic map that uses linear symbols to represent movement.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Topographic maps
+
+<div id="htmlwidget-b45db4dead118f007a95" style="width:100%;height:70%;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b45db4dead118f007a95">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[30,0.1],2,[]],"calls":[{"method":"addProviderTiles","args":["OpenTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Maps that show a topographic description of an area with the use of contour lines or shades to show elevation.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Topological maps
+
+&lt;center&gt;&lt;img src="https://www.tokyometro.jp/en/subwaymap/img/img_01.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Tokyo subway map&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Maps that are only concerned with relative locations of features on the map e.g. subway maps. 
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map types
+
+- Cartometric maps
+
+&lt;center&gt;&lt;img src="https://seahistory.org/wp-content/uploads/nautical-chart.jpg" width = "650" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Nautical map of Provincetown, Massachusetts&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Maps that focus on specific measurements such as area or distance e.g. nautical and aeronautical charts.
+
+---
+
+class: center, middle, inverse
+
+#Map design
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+When it comes to designing a map there is no one formula for a good design, however, key things needs to be considered. 
+
+These include: 
+
+- Projection
+
+- Symbology - Colours
+
+- Scale
+
+- Legend
+
+- Labelling
+
+- Titles and additional text
+
+- North arrow and inset map
+
+- Layout
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+.pull-left[
+
+Let’s imagine the Earth (3D) flattened out (2D)...
+
+
+&lt;center&gt;&lt;img src="https://mangomap.com/assets/images/projection.gif" width = "350" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+.pull-right[
+
+Notice that the shape and size of the continents is different. 
+
+This distortion occurs because the curved surface becomes flat subsequently affecting **shape**, **area**, **distance** and **direction**. 
+
+The different types of projections will preserve and/or distort different attributes.
+
+]
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+**Projection** is the process of converting the three-dimensional spherical Earth onto a two-dimensional flat surface (e.g. map, chart or computer screen)
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/proj.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+The type of projection can be based on the projection *surface* (i.e. where the flat surface is placed on the surface of the globe) and the *properties* that the projection preserves.
+
+Projection by surface
+
+1, Planar/Azumithal: A plane is placed over the globe.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/figure7.jpg" width = "900" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+The type of projection can be based on the projection *surface* (i.e. where the flat surface is placed on the surface of the globe) and the *properties* that the projection preserves.
+
+Projection by surface
+
+2, Conical: A cone is placed over the globe. Conic projection can be either tangent or secant.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/figure9.jpg" width = "550" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+The type of projection can be based on the projection *surface* (i.e. where the flat surface is placed on the surface of the globe) and the *properties* that the projection preserves.
+
+Projection by surface
+
+3, Cylindrical: A cylinder is placed over the globe that can touch either along a latitude line (normal), a longitude line (transverse) or another line (oblique).
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/figure10.jpg" width = "800" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+The type of projection can be based on the projection *surface* (i.e. where the flat surface is placed on the surface of the globe) and the *properties* that the projection preserves.
+
+Projection by metric property
+
+- Equal-area: preserves areal relationships.
+
+- Conformal: preserves local angles.
+
+- Azimuthal: correct directions from the centre of the map are maintained.
+
+- Equidistant: displays the true distance from one or two points on the map to any other point on the map or along specific lines.
+
+- Compromise: do not entirely preserve any property but instead provide a balance of distortion between the various properties.
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+Projection examples
+
+**Gall-Peters**
+
+This projection maps all areas in their correct sizes relative to each other, however, it distorts their shapes.
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-14-1.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+Projection examples
+
+**Winkel Tripel**
+
+This projection has the lowest area distortions among compromise projections for small-scale mapping.
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-17-1.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+Projection examples
+
+**Van der Grinten**
+
+This projection is neither equal area nor conformal, it shows the globe on a circle with distorted polar regions.
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-16-1.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+Projection examples
+
+**Mercator**
+
+This projection distort the shape and relative size of continents, particularly near the poles. Example: [True size of](https://thetruesize.com/)
+
+&lt;center&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Mercator_projection_Square.JPG" width = "400" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+Projection examples
+
+**Spilhaus**
+
+&lt;center&gt;&lt;img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2020/02/SpilhausLayoutPreview.jpg" width = "400" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+This projection was authored by Athelstan F. Spilhaus, a South African-American geophysicist and oceanographer, in 1942. It centers around Antarctica presenting the ocean as one body of water.
+
+The Spilhaus projection is becoming more and more popular and it is being used to highlight that the planet is covered by one ocean (see Drop the S for more detail).
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Projection
+
+It is important to keep in mind that when a map is made distortion will always occur. 
+
+It is either area or shape that can be preserved, not both. 
+
+Thus, the projection type used should be considered based on the data type and how the final map will be presented.
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology
+
+Location and properties are represented by symbols with different size, shape, colour, and pattern. Map symbol design relies heavily on the proper use of the visual variables shown below.
+
+&lt;center&gt;&lt;img src="https://uploads-ssl.webflow.com/5f6a4786fa53db61032919f9/5fa44835ab735150a7e18135_visual_variables.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+*“Colour is a sensory response to electromagnetic radiation in a narrow part of the wavelength spectrum between roughly 0.4 μm and 0.7 μm, called the”visible band."*
+
+&lt;center&gt;&lt;img src="https://i.pinimg.com/originals/67/79/97/677997677df408a2c44c718519dc32f5.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+ 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Electromagnetic spectrum
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+.pull-left[
+Things around us appear to have different colours because they either absorb and reflect them or transmit them. 
+
+For example, a blue shirt appears blue because the dye molecules in the fabric have absorbed the wavelengths of light from the violet/blue end of the spectrum and blue light is the only light that is reflected from the shirt. 
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://lah.elearningontario.ca/CMS/public/exported_courses/SNC2P/exported/SNC2PU02/SNC2PU02/SNC2PU02A04/_images/LightAbsorptionReflection.jpg" width = "400" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+.pull-left[
+
+During the map making process, colours will have an important role in emphasising qualitative and quantitative data. 
+
+Colour is also one of the first components noticed by end-users.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://www.ox.ac.uk/sites/files/oxford/styles/ow_content_width/s3/media_wysiwyg/2_Brexit_percent.jpg?itok=FdeGVFkD" width = "400" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+**Additive colours**
+
+.pull-left[
+
+RGB: Red, green and blue produce the colour white when added together.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://static.photocdn.pt/images/articles/2016-3/color_theory/AdditiveColor.png" width = "400" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+**Additive colours**
+
+.pull-left[
+
+Modern computers can display over 16 million different colours using 255 shades of each red, green and blue.
+
+The possibilities for mixing these three colours together can be represented as a three dimensional coordinate plane with the values for red, green and blue on each axis. 
+
+This coordinate plane yields the RGB colour space.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://www.baslerweb.com/fp-1485687434/media/editorial/content_images/faqs/faq_RGB_1.gif" width = "500" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+**Additive colours**
+
+.pull-left[
+
+If all three colours are zero, it means that no light is emitted and the resulting colour is black (0, 0, 0).
+
+If all three colours are set to their maximum values, the resulting colour is white (255, 255, 255).
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://www.baslerweb.com/fp-1485687434/media/editorial/content_images/faqs/faq_RGB_1.gif" width = "500" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+**Additive colours**
+
+.pull-left[
+
+Two alternative representations of the RGB colour space were developed for computers to allow map makers (and designers) to mix colours more intuitively and work directly with visual variables such as hue, saturation, value/light.
+
+HSY/HSL values are given on a cylindrical coordinate systems:
+
+- Hue: Angle around the central vertical axis.
+
+- Saturation/chroma: Distance from the central axis.
+
+- Value/Lightness: Distance along the central axis.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://www.researchgate.net/profile/Bogdan-Haifa/publication/50600592/figure/fig2/AS:305740741922817@1449905681103/HSV-left-and-HSL-right-representations_W640.jpg" width = "600" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Hue is the shade or tint of a colour and it is used to identify qualitative differences. For example blue hues are used to illustrate ocean depth.
+
+Saturation/chroma refers to the intensity of colour. As the saturation increases, the colours appear to be more pure, while as the saturation decreases, the colours appear to be more pale. Saturation can be used to make otherwise unseen features come to the viewer’s attention.
+
+Value (light) gives how light or dark the colour us. It is used to represent numerical difference on a quantitative scale (e.g. ranking). For example, a choropleth map that shows population density across states or countries.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+**Subtractive colours**
+
+.pull-left[
+
+CMYK: Cyan, magenta, yellow and black (key) are the subtractive colours. 
+
+Each one absorbs one of additive colours: cyan absorbs red, magenta absorbs green and yellow absorbs blue.
+
+Adding two subtractive colours together will transmit one of the primary colours. 
+
+This kind of colour model is used in printing.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/SubtractiveColor.svg/800px-SubtractiveColor.svg.png" width = "400" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colours are specified by mixing additive or subtractive colours.
+
+
+When a map is designed, the colour space should be chosen depending on whether the map will be used on the screen (e.g. interactive map) or will be printed (e.g. hardcopy map).
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Selecting colours
+
+All GIS software will allow the user to select colours using the HSV and RGB colour space.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/colours.gif" width = "500" height = "auto"&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Selecting colours
+
+
+.pull-left[
+
+Other then the RGB and HSL values used to pick a colour, web pages also use Html notations in hexadecimal format to display a colour.
+
+]
+
+.pull-right[
+
+&lt;center&gt;&lt;img src="https://miro.medium.com/max/390/1*JAQcgtokGhMxVUDQ_GfyiA.gif" width = "300" height = "auto"&gt;&lt;/center&gt;
+
+]
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The binary counting system uses only two symbols, 0 and 1, to represent numerical information. The hexadecimal numbering system on the other hand contains 16 sequential numbers as base units, including 0. This is a convenient way to express binary numbers in modern computers as one hexadecimal digit can represent the arrangement of four binary digits, while two hexadecimal digits can represent eight binary digits.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Selecting colours
+
+A HEX colour is expressed as a six-digit combination of numbers and letters defined by its mix of red, green and blue (RGB). For example: red = #FF0000, black = #000000, white = #FFFFFF.
+
+
+&lt;embed src="https://codepen.io/ho-ng-ni/embed/mdyxPXX?default-tab=&amp;theme-id=" width="100%" height="350"&gt;&lt;/embed&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+Colour schemes
+
+When selecting colours, it is also important to consider colour combinations so that the final map is aesthetically pleasing.
+
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/colours.jpg" width = "500" height = "auto"&gt;&lt;/center&gt;
+
+60-30-10 rule: When selecting colours it is best to choose them in a 60% (dominant hue) + 30% (secondary colour) + 10% (accent colour) proportion. This will give balance and will also be more comfortable for the map viewers’ brains.
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The examples below are based on colours arranged on the colour wheel according to their chromatic relationships.
+
+- Monochromatic colour scheme is made up from one colour with lighter and darker variations of that colour.
+
+- Analogous colour scheme is made up of colours directly adjacent to the base colour.
+
+- Complementary colour scheme is made up of colours opposite from each other.
+
+- Split complementary colour scheme use two adjacent colours from the base complementary.
+
+- Triadic colour scheme is made up from three, equidistant colours.
+
+- Tetradic colour scheme is made up from two sets of complementary colours spaced out in a shape of a triangle.
+
+- Square colour scheme is similar to the tetradic scheme but it is composed of four colours.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+When a map is made, the colours can be structured in different ways to reflect the quantitative and qualitative character of the data.
+
+Sequential: Vary lightness to show ordered or numeric data (less &gt; more).
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-19-1.png" width = "520" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+When a map is made, the colours can be structured in different ways to reflect the quantitative and qualitative character of the data.
+
+Diverging: Used when the data have different extremes with a mid-point (above / below).
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-20-1.png" width = "520" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Symbology -&gt; Colours
+
+When a map is made, the colours can be structured in different ways to reflect the quantitative and qualitative character of the data.
+
+Qualitative: Used to represent differences between map features (categories).
+
+&lt;center&gt;&lt;img src="https://bookdown.org/tep/gisbooklet/Figures/3unnamed-chunk-21-1.png" width = "520" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Scale
+
+When choosing a symbology, map scale (how distance is shown) should also be considered. 
+
+Scale is a map’s representative fraction, expressed as a ratio of the map distance to the ground distance. 
+
+For example, a scale of 1:10 means that one map unit represents 10 of the same units on the ground. 
+
+So if two points located 10 km apart are shown 1 cm apart on a map, then the scale of the map is 1 cm to 10 km.
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Scale
+
+Scale is presented either as a word statement, ratio, fraction or scale bar.
+
+In terms of scale, there are also distinctions between a small scale and a large scale maps.
+
+Large scale maps have scales of 1:24,000 or larger. They show an area with more detail.
+
+Small scale maps have scales of 1:500,000 or smaller. They show an area with less detail.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/figure14.jpg" width = "800" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Legend
+
+Legend or key is a visual explanation of the symbols used on the map. 
+
+It includes a sample of each symbol and a short description of what the symbol means. 
+
+A clear and concise legend is critical for conveying the distinctive characteristics of the map.
+
+&lt;center&gt;&lt;img src="https://www.bbc.co.uk/staticarchive/046c24d92c3ba9ee5b4672904d2fa6c7df12a034.gif" width = "700" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Labelling
+
+Labelling helps recognise map features so it should be designed and positioned well to be effective. 
+
+Good labelling considers order, placement, colours, font styles, type effect and sizing.
+
+&lt;center&gt;&lt;img src="https://www.worldatlas.com/aatlas/newart/imaged.jpg" width = "700" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Titles and additional text
+
+Title and subtitle should include information about the topic of the map, the geographic area and temporal information.
+
+&lt;center&gt;&lt;img src="https://mapsvg.com/wp/wp-content/uploads/2020/05/title.jpg" width = "600" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- North arrow and inset map
+
+The north arrow along with a small inset map can help the audience maintain a geographical frame of reference.
+
+&lt;center&gt;&lt;img src="https://www.qgistutorials.com/en/_images/output.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Map design
+
+- Layout
+
+When considering the placement of elements (map, titles, additional text, scale, legend, north arrow and so on), it is important to take into account visual balance (vertical and horizontal alignment of the elements) and visual hierarchy (arrangement of elements) so that it is aesthetically pleasing and also signifies their order.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/layout.png" width = "600" height = "auto"&gt;&lt;/center&gt;
+
+A well designed map will have harmony, composition, and clarity. 
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Summary
+
+- Spatial intelligence is the capacity to visualise and analyse spatial relationships between objects, such as location, distance, direction, shape and pattern.
+
+- Cartography is the study and practice of creating charts and maps based on geographical layout.
+
+- Mapping refers to all of the processes of producing a map: collecting data, designing and preparing for distribution in hardcopy or for the Internet.
+
+&lt;center&gt;&lt;img src="" width = "520" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Summary
+
+Cartographic processes: 
+
+- Purpose of the map
+
+- Audience
+
+- Type - reference, thematic, topographic, topological and cartometric
+
+- Design - projection, symbology (colours), scale, legend, labelling, titles and additional text, north arrow, inset map
+
+- Layout
+
+&lt;center&gt;&lt;img src="" width = "520" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Case studies
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/badmap.jpg" width = "650" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+What do you think of this map?
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Case studies
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/goodmap.jpg" width = "650" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+What do you think of this map?
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Case studies
+
+&lt;center&gt;&lt;img src="https://blog.stratasan.com/hs-fs/hubfs/REALLY_Bad.png?width=1050&amp;name=REALLY_Bad.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+This is a perfect example of doing too much. Conceptually, the map makes sense, but its execution is extremely flawed. The three colors for reading, writing, and earning money combine into a muddy unintelligible colour-ramp. This means it will take an extremely long amount of time to interpret the results and the map reader has a hard time understanding the message and actionable items. Always remember, with maps, less is more!
+
+When making a map, keep in mind whether someone with no context or knowledge would be able to understand and interpret it correctly without asking others for help. If they can’t, your map needs to be simplified.
+
+The easy fix for the map above would be to create a red, blue, and yellow map. Creating three separate maps would have made for a meaningful series of images rather than the unintelligible, bizarre color wheel we see above.
+
+Source: https://blog.stratasan.com/bad-maps-bad-maps
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Case studies
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/tweet.png" width = "1000" height = "auto"&gt;&lt;/center&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, p.caption {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+What do you think of this map?
+
+---
+
+class: center, middle, inverse
+
+#Thank you for your attention!  
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://i.stack.imgur.com/bUpIh.png),url(https://ulyngs.github.io/rmarkdown-workshop-2019/slides/figures/rmarkdown.png), url(https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
 background-size: 50px, 50px
-background-position: 46% 70%, 54% 70%
+background-position: 45% 70%, 50% 70%, 55% 70%
 class: center, middle, inverse
 .footer[Copyright © 2021 Thames Estuary Partnership]
 
@@ -289,7 +2379,7 @@ class: center, middle, inverse
     &lt;/p&gt;
 
 &lt;br&gt;
-###### Slides were prepared using R Studio's R Markdown
+###### Slides were prepared using R Studio, R Markdown &amp; Xaringan
 &lt;br&gt;
 &lt;style&gt;
 .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
@@ -321,6 +2411,7 @@ a:visited {
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
+"ratio": "16:9",
 "slideNumberFormat": "%current%/%total%"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
