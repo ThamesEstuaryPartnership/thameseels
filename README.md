@@ -16,7 +16,7 @@
 
 Topics:
 
-- Introduction to Cartography (<a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>)
+- Introduction to Cartography (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/cartography/#1" target="_blank">link</a>)
 
 - Introduction to GIS
 
@@ -25,8 +25,6 @@ Topics:
 - Introduction to QGIS
 
 - Introduction to ArcGIS
-
-<p style="color:#CF0029">Please fill out the <a href="https://thamesestuarypartnership.github.io/thameseels/workshops/cartography/#1" target="_blank">survey</a>!</p>
 
 ### Workshop 4 - coming soon...
 
