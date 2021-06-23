@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>GIS</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Wanda Bodnar" />
+    <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png), url(https://www.thamesriverstrust.org.uk/wp-content/uploads/2021/05/Thames-Catchment-Community-Eel-Project-Logo.png)
+background-size: 12%
+background-position: 42% 88.5%, 58% 91.5%
+class: center, middle, inverse
+.footer[Copyright © 2021 Thames Estuary Partnership]
+
+##Thames Catchment Community Eels Project
+
+##Workshop series 3
+
+###Intro to GIS
+Thames Estuary Partnership &lt;br&gt; Wanda Bodnar &lt;br&gt;&lt;br&gt; &lt;i style=font-size:80%;&gt;(Press H to see the site navigation options)&lt;/i&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, h4, h5, p {
+  color: #f3f3f3;
+}
+.inverse {
+  background-color: #101720;
+}
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://raw.githubusercontent.com/ThamesEstuaryPartnership/roadmap/main/img/1.png)
+background-size: cover
+.text[© Johannes Plenio]
+
+&lt;style&gt;
+.text {
+    color: #ffffff;
+    position: fixed;
+    top: 96%;
+    left: 2%;
+    text-align: left;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Table of contents
+
+* Recap - Intro to Cartography
+
+* What is GIS?
+
+* GIS capabilities
+
+* GIS data
+
+* GIS software
+
+* Summary
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+class: center, middle, inverse
+
+#Recap
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Recap
+
+Intro to Cartography -&gt; Spatial thinking &amp; intelligence
+
+The capacity to imagine or visualise: 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/carto1.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;&lt;/p&gt;&lt;/center&gt;
+
+- Positions of objects
+
+- Their shapes
+
+- Their spatial relations to one another and the movement they make to form new spatial relations
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Recap
+
+Intro to Cartography -&gt; History 
+
+Maps carved on cave walls -&gt; Clay maps -&gt; Paper maps -&gt; Interactive maps
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Recap
+
+Intro to Cartography -&gt; Map making - things to consider
+
+- Purpose of the map: 
+
+ - Why am I making this map? 
+ - What is the story that I want to tell?
+
+- Audience: 
+  - Who is it for? Novices? Experts? 
+  - Why are they interested?
+
+- Map type: 
+  - What do I want to show with the map? 
+  - What kind of data am I using?
+
+- Map design: 
+  - Is my map easy to read and interpret? 
+  - Am I using visual variables and hierarchy in a right way? 
+  - Is my map the right scale?
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Recap
+
+Intro to Cartography -&gt; Map types
+
+- Reference maps
+
+- Thematic maps
+
+  - Qualitative maps: show the spatial distribution of single theme of nominal data (e.g. time zones). 
+  
+  - Quantitative maps display the spatial aspects of numerical data (single, multiple).
+    
+- Topographic maps
+
+- Topological maps
+
+- Cartometric maps
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Recap
+
+Intro to Cartography -&gt; Map design
+
+- Projection
+
+- Symbology - Colours
+
+- Scale
+
+- Legend
+
+- Labelling
+
+- Titles and additional text
+
+- North arrow and inset map
+
+- Layout
+
+&lt;br&gt;
+&lt;br&gt;
+
+**Slides:** [https://thamesestuarypartnership.github.io/thameseels/workshops/cartography](https://thamesestuarypartnership.github.io/thameseels/workshops/cartography/#1)
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+class: center, middle, inverse
+
+#GIS
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+GIS is the abbreviation for Geographic Information System. 
+
+It is a computer-based tool for collecting, storing, processing, analysing, visualising and interpreting spatially referenced data.
+
+GIS is a useful tool to help answer geographic questions and make decisions. 
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+Example usage: 
+
+- Climatologists to understand the causes and consequences of climate change
+
+- Political consultants to develop campaign strategies for elections
+
+- Epidemiologists to locate ground zero of a disease outbreak
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+&lt;center&gt;&lt;img src="https://media.nationalgeographic.org/assets/photos/000/276/27636.jpg" width = "600" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;John Snow's cholera map - the black circles stacked show the the number of cases (Source: NG)&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+In 1854 Doctor John Snow mapped the cases of the deadly cholera epidemic in London's Broad Street region and was able to trace the cholera outbreak to a single infected water pump. Snow's research was the first example of combining public health research and geography.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+&lt;center&gt;&lt;a target="_blank" href="https://www.nytimes.com/interactive/2020/03/22/world/coronavirus-spread.html"&gt;&lt;img alt="" src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure0.gif" width = 800" height = "auto"&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;How the Virus Got Out (Source: The New York Times) &lt;br&gt;&lt;i&gt;Click on the image to see the map&lt;i&gt;&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The use of interactive maps to tell stories is increasingly common, especially in journalism. 
+The interactive story map below was made by The New York Times and it tells the story of how the SARS-CoV-2 virus got out of Wuhan, China.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+&lt;center&gt;&lt;a target="_blank" href="https://coronavirus.jhu.edu/map.html"&gt;&lt;img alt="" src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis1.png" width = 900" height = "auto"&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;COVID-19 Dashboard (Source: John Hopkins University) &lt;br&gt;&lt;i&gt;Click on the image to see the map&lt;i&gt;&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+John Hopkins University dashboard.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+Geographic: location, e.g. Ravensbourne
+
+Information: attribute, e.g. Barriers
+
+System: hardware and software, e.g. satellites, ArcGIS, QGIS
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+Geographic information is made up of spatial location data and attribute data. 
+
+- Spatial location data is data with geographic component. It answers the question *where something is*.
+
+- Attribute data answers the question *what something is*.
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis2.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Location of barriers for the Thames Eels project&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The example shows a choropleth map of Internet users (per 100 people) in 2016.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis3.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Associated attribute table&lt;/p&gt;&lt;/center&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+The database that contains these geographic information is called an **attribute table** and it can be used to symbolise features, make queries and to analyse the data. 
+
+---
+
+class: center, middle, inverse
+
+#GIS capabilities
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Data processing: to view, create, edit, transform and display geospatial data. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis2.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Location of barriers - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Data processing: to view, create, edit, transform and display geospatial data. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis4.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Editing - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Spatial analysis: different tools are used within GIS to identify trends, patterns and relationships in data. 
+
+For example spatial analysis can be creating buffers, clipping features, network analysis, performing spatial statistics and so on. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis5.png" width = "700" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;100m buffer around the rivers - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Map making: visualisation of spatial data. This is the most common use of GIS.
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis6.png" width = "750" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Preliminary barrier data - ArcGIS Web Map&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Imagery and remote sensing: This is used to extract information from imagery and remotely sensed data (e.g. satellites).
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis7.png" width = "750" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Landsat 8 showing the Somerset flooding in 2014 - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Imagery and remote sensing: This is used to extract information from imagery and remotely sensed data (e.g. satellites).
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis8.png" width = "750" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Trained classification to recognise water - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Imagery and remote sensing: This is used to extract information from imagery and remotely sensed data (e.g. satellites).
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis9.png" width = "750" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Calculating the extent of flooding - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Data collection and management: to access, use, integrate and store data in a GIS
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis10.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Data management toolbox - ArcMap&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS capabilities
+
+- Data collection and management: to access, use, integrate and store data in a GIS
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis11.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Data engineering - ArcGIS Pro&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+class: center, middle, inverse
+
+#GIS data
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types**
+
+Geographic information can be stored either as a vector data or a raster data. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types: Vector data**
+
+Vector (or feature) data is categorical data stored as geometrical shapes such as:
+
+- Points: Points are single x,y coordinate locations. 
+
+- Lines: Lines are defined by two or more points that are connected with lines. 
+
+- Polygons: Polygons are defined by multiple points that are connected with lines and are closed. 
+
+For example, geospatial data that show the location of buildings, rivers or ponds. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure3.jpg" width = "350" height = "auto"&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure3a.jpg" width = "350" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Vector types and vector data drawn on a map&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types: Raster data**
+
+Raster data is made up of a matrix of pixels, called cells, with each being the same size and containing a value that represents the conditions for the area covered by that cell. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure4.jpg" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Raster data&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types: Raster data**
+
+Raster data represents continuous data (integer or real values) like temperature or elevation.
+
+The example map below shows the average sea surface temperature on the 1st April in 2008. 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure5.jpg" width = "500" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Sea surface temperature on 01/04/2008 (Source: Naval Oceanographic Office)&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types: Metadata**
+
+Metadata is essentially data about data. 
+
+It provides additional information about the (geographic) data such purpose, who created it, scale, projection, attributes, its usage constraints and so on. The more detailed the metadata is, the easier for the user to interpret it and implement it.
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Types: Metadata**
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis12.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p class="caption"&gt;Metadata - ArcGIS Pro&lt;/p&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Capture**
+
+Primary data capture is a direct data acquisition methodology. 
+
+Directly captured data can come from a global positioning system (GPS) or from remote sensing and surveying technologies. 
+
+For example, data collected during field surveys, using satellite imaginary or Lidar. 
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;center&gt;&lt;img src="https://www.arcgis.com/sharing/rest/content/items/777cb2fb764d4dae946cafa5588eb55a/resources/6-River-Obstacles-App-Logo.png?v=1624463918532" width = "600" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+Lidar (Light Detection and Ranging) is a remote sensing method that uses light in the form of a pulsed laser to measure ranges to the Earth. These light pulses—combined with other data recorded can generate precise, three-dimensional information about the shape of the Earth and its surface characteristics. A lidar instrument principally consists of a laser, a scanner and a specialised GPS receiver. 
+
+The two types of Lidar are: 
+
+- Topographic uses a near-infrared laser to map the land.
+
+- Bathymetric uses water-penetrating green light to also measure seafloor and riverbed elevations.
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Capture**
+
+Secondary data capture is an indirect data acquisition methodology. 
+
+For example, the use of existing geospatial data (e.g. through sites like [NASA](https://nasa.github.io/data-nasa-gov-frontpage/) or [NOAA](https://www.ncdc.noaa.gov/data-access)) available in both digital and hardcopy formats. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Capture**
+
+A third way of data capture is digitisation. This is used to create digital files from the original paper copy.
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+Vector and raster data can be stored and distributed in different formats. 
+
+*Shapefile*
+
+Shapefile was first developed by Esri and it is the most widely known format for distributing geospatial vector data. A shapefile will always come in a .zip format containing the following files: 
+
+- .shp: Contains the geometry of each feature.
+
+- .dbf: Contains the attribute data for all of the features in the dataset.
+
+- .shx: Spatial index, it allows GIS systems to find features within the .shp file.
+
+- .prj: Contains information about the projection and coordinate system the data uses.
+
+- .cpg: This is an optional plain text file that describes the encoding applied to create the shapefile.
+
+- .sbn and .sbx: These are also optional files that store the spatial index of the features.
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+Vector and raster data can be stored and distributed in different formats. 
+
+*GeoJSON*
+
+GeoJSON is a JavaScript format used to store geospatial vector data. It consists from the following different parts:
+
+- Geometry object: This is either the point, line, or polygon described earlier.
+
+- Feature object: This is the geometry object and the associated random data.
+
+- FeatureCollection: A list of feature objects.
+
+GeoJSON is widely used in web-based mapping (e.g. Leaflet or CartoDB) as this format is easy to handle and also "lighter" than a shapefile. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+Vector and raster data can be stored and distributed in different formats. 
+
+*TopoJSON*
+
+TopoJSON is simply an extension of the GeoJSON format that encodes topology.
+
+*CSV, TXT, and GPX files*
+
+Spreadsheet data can be stored and used in different GIS software in a comma-separated values text file (.csv), a delimited text file (.txt) or GPS Exchange Format file (.gpx) format.
+
+*KML*
+
+KML (Keyhole Markup Language) is a file format used to display geographic data in an Earth browser such as Google Earth or ArcGIS Earth. KMZ files are the zipped versions KML files. 
+
+*GeoTiff*
+
+GeoTiff has georeferenced information embedded within an image file. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+Vector and raster data can be stored and distributed in different formats. 
+
+*NetCDF*
+
+NetCDF (Network Common Data Form) files are a standard for the exchange of scientific data in binary format. This is used for storing raster data in GIS.  
+
+*API*
+
+Application Programming Interface (API) is a software intermediary that allows two applications to talk to each other. For example, a data layer stored on ArcGIS can be directly plugged into a map made in QGIS or other web-mapping software.
+
+In GIS, a data layer through API can be accessed via Web Mapping Service (WMS), Web Feature Service (WFS) or GeoJSON. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Quality**
+
+Due to how geospatial data is collected, analysed and represented, uncertainties with data quality may arise. These errors are in fact expected as almost all representations of the world are incomplete.
+
+Two primary attributes that characterise data quality are precision and accuracy. 
+
+*Precision* refers to the fineness and exactness of the measurements, whilst *accuracy* is the difference between the recorded value and the true value.  
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Quality**
+
+To understand the difference between precision and accuracy, consider the illustration below: 
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure6.jpg" width = "400" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt; 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Quality**
+
+When it comes to data quality in GIS, here are some of the things look out for: 
+
+- The completeness of the attribute table (Is there any data missing?)
+
+- Temporal consistency (Is it up-to-date?)
+
+- Location accuracy (Is the position of the feature correct?)
+
+- Logical consistency (Is the data topologically correct?)
+
+Unfortunately, the more accurate and precise a geospatial data is, the higher cost is to obtain it and store it. This is because of the time and equipment used to collect the data. Larger data will also always require constant maintenance. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+### GIS data
+
+**Finding data**
+
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://i.stack.imgur.com/bUpIh.png),url(https://ulyngs.github.io/rmarkdown-workshop-2019/slides/figures/rmarkdown.png), url(https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
+background-size: 50px, 50px
+background-position: 45% 70%, 50% 70%, 55% 70%
+class: center, middle, inverse
+.footer[Copyright © 2021 Thames Estuary Partnership]
+
+&lt;br&gt;
+&lt;a href="https://www.thamesestuarypartnership.org/"&gt;Thames Estuary Partnership&lt;/a&gt;
+&lt;br&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+&lt;p style="text-align: center;"&gt;
+    &lt;a href="mailto:w.bodnar@ucl.ac.uk" class="fa fa-envelope"&gt;&lt;/a&gt;
+    &lt;a href="https://twitter.com/ThamesEstPart" class="fa fa-twitter"&gt;&lt;/a&gt;   
+    &lt;a href="https://www.linkedin.com/company/thames-estuary-partnership/?viewAsMember=true" class="fa fa-linkedin"&gt;&lt;/a&gt;   
+    &lt;a href="https://www.instagram.com/thamesestuarypartnership/" class="fa fa-instagram"&gt;&lt;/a&gt;   
+    &lt;a href="https://www.facebook.com/thamesestuarypartnership/" class="fa fa-facebook"&gt;&lt;/a&gt;
+    &lt;/p&gt;
+
+&lt;br&gt;
+###### Slides were prepared using R Studio, R Markdown &amp; Xaringan
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "%current%/%total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
