@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>GIS</title>
+    <title>Introduction to GIS</title>
     <meta charset="utf-8" />
     <meta name="author" content="Wanda Bodnar" />
     <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
@@ -24,7 +24,7 @@ class: center, middle, inverse
 
 ##Workshop series 3
 
-###Intro to GIS
+###Introduction to GIS
 Thames Estuary Partnership &lt;br&gt; Wanda Bodnar &lt;br&gt;&lt;br&gt; &lt;i style=font-size:80%;&gt;(Press H to see the site navigation options)&lt;/i&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -79,11 +79,13 @@ background-position: 98% 4%
 
 * Recap - Intro to Cartography
 
-* What is GIS?
+* What is GIS
 
 * GIS capabilities
 
 * GIS data
+
+* Finding GIS data
 
 * GIS software
 
@@ -1042,6 +1044,31 @@ background-position: 98% 4%
 
 Vector and raster data can be stored and distributed in different formats. 
 
+*Shapefile*
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis13.png" width = "1000" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+Vector and raster data can be stored and distributed in different formats. 
+
 *GeoJSON*
 
 GeoJSON is a JavaScript format used to store geospatial vector data. It consists from the following different parts:
@@ -1053,6 +1080,8 @@ GeoJSON is a JavaScript format used to store geospatial vector data. It consists
 - FeatureCollection: A list of feature objects.
 
 GeoJSON is widely used in web-based mapping (e.g. Leaflet or CartoDB) as this format is easy to handle and also "lighter" than a shapefile. 
+
+Useful site: [https://geojson.io](https://geojson.io/#map=2/20.0/0.0)
 
 &lt;style&gt;
 h1, h2, h3, p, ul {
@@ -1088,7 +1117,7 @@ KML (Keyhole Markup Language) is a file format used to display geographic data i
 
 *GeoTiff*
 
-GeoTiff has georeferenced information embedded within an image file. 
+GeoTiff has georeferenced information embedded within an image file. This is raster data.
 
 &lt;style&gt;
 h1, h2, h3, p, ul {
@@ -1112,13 +1141,106 @@ Vector and raster data can be stored and distributed in different formats.
 
 *NetCDF*
 
-NetCDF (Network Common Data Form) files are a standard for the exchange of scientific data in binary format. This is used for storing raster data in GIS.  
+NetCDF (Network Common Data Form) files are a standard for the exchange of scientific data in binary format. This is another way of storing raster data in GIS.  
 
 *API*
 
 Application Programming Interface (API) is a software intermediary that allows two applications to talk to each other. For example, a data layer stored on ArcGIS can be directly plugged into a map made in QGIS or other web-mapping software.
 
 In GIS, a data layer through API can be accessed via Web Mapping Service (WMS), Web Feature Service (WFS) or GeoJSON. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+*API*
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis14.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+*API*
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis14a.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+*API*
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis15.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS data
+
+**Format**
+
+*API*
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis15a.png" width = "800" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
 
 &lt;style&gt;
 h1, h2, h3, p, ul {
@@ -1207,11 +1329,266 @@ h1, h2, h3, p, ul {
 
 ---
 
-### GIS data
+class: center, middle, inverse
 
-**Finding data**
+#Finding GIS data
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Finding GIS data
+
+Simple Google search...
+
+&lt;center&gt;&lt;img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis16.png" width = "900" height = "auto"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Finding GIS data
+
+- [ArcGIS Living Atlas of the World](https://livingatlas.arcgis.com/en/home/): This is a collection of geographic information from around the globe.
+
+- [Cathcment Based Approach Data Hub](https://data.catchmentbasedapproach.org/): GIS data package is a set of over 150 data layers, which is provided to CaBA catchment hosts in the UK. 
+
+- [Copernicus](https://scihub.copernicus.eu/dhus/#/home): Copernicus is the European Union's Earth observation programme. 
+
+- [Defra UK](https://environment.data.gov.uk/): Defra Data Services Platform
+
+- [EmodNet](https://emodnet.eu/en): EmodNet is the gateway to marine data in Europe. 
+
+- [Esri Data Hub](https://hub.arcgis.com/search): Esri houses over 250,000 open data sets from 5,000 organisations worldwide. 
+
+- [JNCC Marine Protected Area (MPA) mapper](https://jncc.gov.uk/mpa-mapper/): This is an interactive resource containing information on the MPAs designated in UK and Crown Dependency waters.
+
+- [Koordinates](https://koordinates.com/): This is a geospatial data management platform.
+
+- [MAGIC](https://magic.defra.gov.uk/home.htm): The MAGIC website provides authoritative geographic information about the natural environment from across government.
 
 
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Finding GIS data
+
+- [Natural Earth Data](http://www.naturalearthdata.com/downloads/): This site houses key cultural and physical vector GIS datasets.
+
+- [Public Datasets](https://github.com/awesomedata/awesome-public-datasets): These are datasets collected and tidied from blogs, answers, and user responses. 
+
+- [Terra Populus](https://terra.ipums.org/): Terra Populus holds population and environmental data. 
+
+- [Open Geospatial Datasets](https://github.com/andrea-ballatore/open-geo-data-education): This is a repository of open geospatial datasets to be used in an educational context.
+
+- [OpenStreetMap](https://www.openstreetmap.org/#map=5/54.910/-3.432): OSM has some of the most detailed information on our planet.
+
+Apart from these, there are many governmental and non-profit platforms that offer free access to geospatial data. 
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+class: center, middle, inverse
+
+#GIS software
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS software
+
+There are a number of open-source (software that is freely available for use) and commercial GIS software available. Here are some of the most well-known (both desktop and web-based): 
+
+- [Carto](https://carto.com/)
+
+- [Esri](https://www.esri.com/en-us/arcgis/products/index)
+
+- [D3.js](https://d3js.org/)
+
+- [Flowmap.blue](https://flowmap.blue/)
+
+- [Flourish](https://flourish.studio/)
+
+- [GoogleEarth](https://earth.google.com/web/)
+
+- [Leafletjs](https://leafletjs.com/)
+
+- [Mango](https://mangomap.com/)
+
+- [Mapbox](https://www.mapbox.com/)
+
+- [MapInfo Pro](https://www.precisely.com/product/precisely-mapinfo/mapinfo-pro)
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### GIS software
+
+There are a number of open-source (software that is freely available for use) and commercial GIS software available. Here are some of the most well-known (both desktop and web-based): 
+
+- [Mapnik](https://mapnik.org/)
+
+- [QGIS](https://www.qgis.org/en/site/)
+
+- [R Studio](https://rstudio.com/)
+
+- [Tableau](https://www.tableau.com/en-gb)
+
+&lt;style&gt;
+h1, h2, h3, p, ul {
+  color: #003462;
+}
+&lt;style&gt;
+
+???
+
+---
+
+class: center, middle, inverse
+
+#Summary
+
+&lt;br&gt;
+&lt;style&gt;
+.inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse p {
+  color: #f3f3f3;
+}
+.inverse h6 {
+  color: #fff2f4;
+}
+a:link {
+  color: #019ed8;
+}
+a:visited {
+  color: #019ed8;
+}
+.footer {
+    color: #a5704a;
+    position: fixed;
+    top: 96%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size:50%;
+}
+&lt;style&gt;
+
+---
+
+background-image: url(https://www.estuaryedges.co.uk/wp-content/themes/estuary-edges/assets/src/img/thames-estuary-partnership-logo.png)
+background-size: 100px
+background-position: 98% 4%
+
+### Summary
+
+- GIS is the abbreviation for geographic information systems. It is a computer system used to create, manage, visualise, analyse and interpret spatially referenced data.
+
+- GIS is used to answer geographic questions and make decisions based on geospatial data.
+
+- Geographic information is made up of spatial location data *(where something is)* and attribute data *(what something is)*.
+
+- GIS can be used for geospatial data processing, spatial analysis, map making, imagery and remote sensing, and data collection and management. 
+
+- GIS data can either be vector or raster data. 
+
+- The quality of geospatial data will depend on the time spent and the equipment used to collect it. However, almost all representations of the world are incomplete. 
+
+- Nowadays there are many Internet platforms that offer open-access geospatial data.
 
 &lt;style&gt;
 h1, h2, h3, p, ul {
