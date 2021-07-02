@@ -18,7 +18,7 @@ Topics:
 
 - Introduction to Cartography (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/cartography/#1" target="_blank">link</a>)
 
-- Introduction to GIS
+- Introduction to GIS (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/GIS/#1" target="_blank">link</a>)
 
 - Introduction to Coordinate Reference Systems
 
