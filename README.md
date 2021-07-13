@@ -6,7 +6,7 @@
 
 ## Project package (<a href="https://storymaps.arcgis.com/collections/7cf499061da14932875025e129bfd104" target="_blank">link</a>)
 
-## Thames Catchment Community Eels Project Interactive Map (<a href="https://tep-thames.maps.arcgis.com/apps/webappviewer/index.html?id=49fba990908f4a288dfe34b101ba2bfe" target="_blank">link</a>)
+## Barrier locations - Interactive Map (<a href="https://tep-thames.maps.arcgis.com/apps/webappviewer/index.html?id=49fba990908f4a288dfe34b101ba2bfe" target="_blank">link</a>)
 
 <hr>
 
