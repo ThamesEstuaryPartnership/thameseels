@@ -22,7 +22,7 @@ Topics:
 
 - Introduction to GIS (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/GIS/#1" target="_blank">link</a>)
 
-- Introduction to Coordinate Reference Systems
+- Introduction to Coordinate Reference Systems (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/CRS/#1" target="_blank">link</a>)
 
 - Introduction to QGIS
 
