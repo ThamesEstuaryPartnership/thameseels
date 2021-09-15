@@ -24,7 +24,7 @@ Topics:
 
 - Introduction to Coordinate Reference Systems (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/CRS/#1" target="_blank">link</a>)
 
-- Introduction to QGIS
+- Introduction to QGIS (<a href="https://bookdown.org/tep/gisbooklet/introduction-to-qgis.html" target="_blank">link</a>)
 
 - Introduction to ArcGIS
 
