@@ -40,6 +40,14 @@ Topics:
 
 <hr>
 
+### Other
+
+- Greater Thames Estuary Fish Migration Roadmap (<a href="https://fishroadmap.london/" target="_blank">link</a>)
+
+- Fish Migration Roadmap StoryMap (<a href="https://storymaps.arcgis.com/stories/20ca53d7ee854edd9bc59636f81651b1" target="_blank">link</a>)
+
+<hr>
+
 Project partners & funders: 
 
 ![alt text](https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/Partner%20Acknowlegements%20Band%20V2.png)
