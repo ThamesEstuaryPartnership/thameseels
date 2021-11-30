@@ -6,6 +6,8 @@
 
 ## Barrier locations - Interactive Map (<a href="https://tep-thames.maps.arcgis.com/apps/webappviewer/index.html?id=49fba990908f4a288dfe34b101ba2bfe" target="_blank">link</a>)
 
+- Latest barrier data - 30/11/2011 (<a href="" target="_blank">link</a>)
+
 <hr>
 
 ### Workshop 1 (<a href="https://storymaps.arcgis.com/stories/9e159dbd2f6042e9a1059b7987de7f18" target="_blank">link</a>)
