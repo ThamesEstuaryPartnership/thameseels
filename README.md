@@ -10,7 +10,7 @@
 
 <hr>
 
-### Workshop 1 (<a href="https://storymaps.arcgis.com/stories/37f0acf5f5e64562b5c93440293b436b" target="_blank">link</a>)
+### Workshop 1 (<a href="https://storymaps.arcgis.com/stories/9e159dbd2f6042e9a1059b7987de7f18" target="_blank">link</a>)
 
 ### Workshop 2 (<a href="https://storymaps.arcgis.com/stories/72a068ca83c941abbb4765c2b5b5159a" target="_blank">link</a>)
 
@@ -26,9 +26,15 @@ Topics:
 
 - Introduction to QGIS (<a href="https://bookdown.org/tep/gisbooklet/introduction-to-qgis.html" target="_blank">link</a>)
 
-- Introduction to ArcGIS
+- Introduction to ArcGIS (<a href="https://bookdown.org/tep/gisbooklet/introduction-to-arcgis.html" target="_blank">link</a>)
 
-### Workshop 4 - coming soon...
+### Workshop 4 
+
+- Fish Migration Vision - September (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/FMV_Sept_FINAL.pdf" target="_blank">link</a>)
+
+- How the Roadmap was built (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/How%20the%20Roadmap%20was%20built.pdf" target="_blank">link</a>)
+
+- Fish Migration Vision - November (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/FMV_Nov_FINAL.pdf" target="_blank">link</a>)
 
 ### Workshop 5 - coming soon...
 
