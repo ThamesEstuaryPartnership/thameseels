@@ -6,7 +6,7 @@
 
 ## Barrier locations - Interactive Map (<a href="https://tep-thames.maps.arcgis.com/apps/webappviewer/index.html?id=49fba990908f4a288dfe34b101ba2bfe" target="_blank">link</a>)
 
-- Latest barrier data - 30/11/2011 (<a href="" target="_blank">link</a>)
+- Latest barrier data (<a href="https://greater-thames-estuary-fish-migration-roadmap-tep-thames.hub.arcgis.com/datasets/thameseels-barriers/explore?location=51.369460%2C-0.843961%2C9.89" target="_blank">link</a>)
 
 <hr>
 
