@@ -28,7 +28,7 @@ Topics:
 
 - Introduction to ArcGIS (<a href="https://bookdown.org/tep/gisbooklet/introduction-to-arcgis.html" target="_blank">link</a>)
 
-### Workshop 4 
+### Workshop series 4 
 
 - Fish Migration Vision - September (<a href="https://thamesestuarypartnership.github.io/thameseels/workshops/FMV_Sept_FINAL.pdf" target="_blank">link</a>)
 
