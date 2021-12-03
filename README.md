@@ -46,7 +46,7 @@ Topics:
 
 - Fish Migration Roadmap StoryMap (<a href="https://storymaps.arcgis.com/stories/20ca53d7ee854edd9bc59636f81651b1" target="_blank">link</a>)
 
-- An integrated GIS-based approach to improve fish migration within the Greater Thames Estuary (<a href="https://zenodo.org/record/5750302" target="_blank">link</a>)
+- An integrated GIS-based approach to improve fish migration within the Greater Thames Estuary (technical article) (<a href="https://zenodo.org/record/5750302" target="_blank">link</a>)
 
 <hr>
 
